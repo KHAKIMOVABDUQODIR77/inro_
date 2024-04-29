@@ -3,7 +3,7 @@
 	--body-bg: #e7e7e7;
 	--btn-bg: #655af2;
 	--input-text-color: #555555;
-	--black-color: #0000;
+	--black-color: #000;
 	--white-color: #fff;
 	--red-color: #f03535;
 }
@@ -50,8 +50,11 @@ body {
 
 .main-content {
 	display: flex;
-	align-items: center;
-	justify-content: center;
+}
+
+.intro-page {
+	display: flex;
+	flex-direction: column;
 	padding-top: 80px;
 	padding-bottom: 80px;
 }
@@ -66,6 +69,7 @@ body {
 }
 
 .hero__bg-img {
+	flex-grow: 1;
 	background-image: url(../img/hero.png);
 	background-position: center center;
 	background-size: cover;
@@ -116,4 +120,57 @@ body {
 	font-size: 19px;
 	line-height: 1.2;
 	text-align: center;
+	cursor: pointer;
+}
+
+.signup-form {
+	background-color: var(--white-color);
+	padding: 55px 60px 40px;
+	border-radius: 20px;
+}
+
+.signup-form__title {
+	font-weight: 600;
+	font-size: 32px;
+	line-height: 1.3;
+	margin-top: 0;
+	margin-bottom: 79px;
+}
+
+.signup-form__input {
+	display: block;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid var(--black-color);
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+
+.signup-form__input:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.signup-form__btn {
+	width: 100%;
+	border: none;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 10px;
+	background-color: var(--btn-bg);
+	color: var(--white-color);
+	cursor: pointer;
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+.signup-form__text {
+	margin-top: 0;
+	font-weight: 500;
+	font-size: 11px;
+	text-align: center;
+}
+
+.signup-form__text span {
+	color: var(--red-color);
 }
